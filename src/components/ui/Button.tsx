@@ -49,20 +49,20 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
 }) => {
   // Base styles yang selalu applied
-  const baseStyles = 'font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseStyles = 'rounded-full font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   // Variant styles - SESUAIKAN dengan design Figma!
   const variantStyles = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
+    primary: 'bg-[#ff5a3d] text-white hover:bg-[#ff735c] focus:ring-[#ff5a3d]',
+    secondary: 'bg-white/10 text-white hover:bg-white/15 focus:ring-white/30',
+    outline: 'border border-white/20 text-white hover:bg-white/10 focus:ring-white/30',
   };
 
   // Size styles
   const sizeStyles = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: 'px-5 py-2 text-xs',
+    md: 'px-9 py-3 text-sm',
+    lg: 'px-10 py-4 text-base',
   };
 
   // Disabled styles
