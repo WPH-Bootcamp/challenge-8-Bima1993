@@ -23,6 +23,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
 @keyframes marquee-left {
   from {
     transform: translateX(0);
@@ -35,6 +39,121 @@ html {
 
 .animate-marquee-left {
   animation: marquee-left 18s linear infinite;
+}
+
+.theme-light-only {
+  display: none !important;
+}
+
+.light-theme .theme-dark-only {
+  display: none !important;
+}
+
+.light-theme .theme-light-only {
+  display: block !important;
+}
+
+.light-theme body,
+.light-theme #root {
+  background: #f8fafc;
+  color: #101828;
+}
+
+.light-theme .bg-black,
+.light-theme .bg-\[\#080808\],
+.light-theme .bg-\[\#080c12\],
+.light-theme .bg-\[\#0d1118\],
+.light-theme .bg-\[\#111111\] {
+  background-color: #ffffff !important;
+}
+
+.light-theme .bg-black\/90 {
+  background-color: rgb(255 255 255 / 0.92) !important;
+}
+
+.light-theme .text-white,
+.light-theme .text-white\/25,
+.light-theme .text-white\/30,
+.light-theme .text-white\/45,
+.light-theme .text-white\/55,
+.light-theme .text-white\/60,
+.light-theme .text-white\/80,
+.light-theme .text-white\/85,
+.light-theme .text-white\/90 {
+  color: #101828 !important;
+}
+
+.light-theme .text-gray-300,
+.light-theme .text-gray-400 {
+  color: rgb(16 24 40 / 0.62) !important;
+}
+
+.light-theme .border-white\/10,
+.light-theme .border-white\/15,
+.light-theme .border-white\/20,
+.light-theme .border-white\/30 {
+  border-color: rgb(16 24 40 / 0.14) !important;
+}
+
+.light-theme .placeholder\:text-white\/35::placeholder {
+  color: rgb(16 24 40 / 0.42) !important;
+}
+
+.light-theme .bg-white\/5,
+.light-theme .bg-white\/10 {
+  background-color: rgb(16 24 40 / 0.04) !important;
+}
+
+.light-theme .keep-white,
+.light-theme .keep-white:hover {
+  color: #ffffff !important;
+}
+
+.light-theme [class*="bg-[#ff5a3d]"],
+.light-theme [class*="bg-[#ff623e]"],
+.light-theme [class*="bg-[rgba(255,98,62,1)]"],
+.light-theme .bg-\[\#d64f35\] {
+  color: #ffffff !important;
+}
+
+.light-theme .testimonials-section {
+  background: #ffffff !important;
+}
+
+.light-theme .testimonial-card {
+  background-color: #ffffff !important;
+  border-color: rgb(255 98 62 / 0.28) !important;
+  box-shadow: 0 28px 90px rgb(16 24 40 / 0.06);
+}
+
+.light-theme .testimonial-card-button {
+  color: #101828 !important;
+}
+
+.light-theme .testimonial-card-button-side {
+  opacity: 0.42 !important;
+  filter: blur(0.75px);
+}
+
+.light-theme .testimonial-card-button-left {
+  mask-image: linear-gradient(to right, transparent 0%, black 36%, black 100%);
+}
+
+.light-theme .testimonial-card-button-right {
+  mask-image: linear-gradient(to left, transparent 0%, black 36%, black 100%);
+}
+
+.light-theme .testimonial-fade-left {
+  background: linear-gradient(to right, #ffffff 0%, rgb(255 255 255 / 0.88) 42%, transparent 100%) !important;
+}
+
+.light-theme .testimonial-fade-right {
+  background: linear-gradient(to left, #ffffff 0%, rgb(255 255 255 / 0.88) 42%, transparent 100%) !important;
+}
+
+.light-theme .mobile-menu-panel {
+  background-color: #ffffff !important;
+  color: #101828 !important;
 }
 
 /* Optional: Custom scrollbar styles */

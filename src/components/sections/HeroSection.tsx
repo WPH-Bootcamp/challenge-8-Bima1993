@@ -1,6 +1,7 @@
 import Button from "../ui/Button";
 import brandLogos from "../../assets/Container.png";
-import heroImage from "../../assets/hero section img.png";
+import darkHeroImage from "../../assets/Dark Theme Hero Section.jpg";
+import lightHeroImage from "../../assets/Light Theme Hero Section.png";
 
 
 const stats = [
@@ -13,33 +14,40 @@ const stats = [
 function HeroSection() {
   return (
     <section className="overflow-hidden bg-black px-6 pb-16 pt-16 text-white">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-        <div className="relative z-10 lg:pt-4">
-          <h1 className="mb-5 max-w-[540px] text-4xl font-bold leading-tight md:text-5xl lg:text-[56px]">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="relative z-20 max-w-[760px] space-y-2 lg:mr-[-120px] lg:pt-4">
+          <h1 className="text-[44px] font-bold leading-[1.12] md:text-[58px] lg:text-[64px]">
             Your Tech Partner for{" "}
             <span className="text-[#ff5a3d]">Smarter Growth</span>
           </h1>
 
-          <p className="mb-8 max-w-[560px] text-base leading-8 text-white/85">
+          <p className="max-w-[700px] text-[22px] font-semibold leading-[1.55] text-white/85">
             We deliver tailored IT solutions to help you scale with speed and
             confidence.
           </p>
 
-          <Button size="sm">Let's Talk</Button>
+          <div className="pt-8">
+            <Button size="sm">Let's Talk</Button>
+          </div>
         </div>
 
-        <div className="relative flex justify-center lg:justify-end">
+        <div className="relative z-10 flex justify-center lg:justify-end">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#ff5a3d2e,transparent_58%)]" />
           <img
-            src={heroImage}
-            alt="Illustration of a digital product dashboard on a smartphone"
-            className="relative z-10 w-full max-w-[420px] object-contain md:max-w-[560px] lg:max-w-[660px]"
+            src={darkHeroImage}
+            alt="Dark theme illustration of a digital product dashboard on a smartphone"
+            className="theme-dark-only relative z-10 w-full max-w-[420px] object-contain md:max-w-[560px] lg:max-w-[660px]"
+          />
+          <img
+            src={lightHeroImage}
+            alt="Light theme illustration of a digital product dashboard on a smartphone"
+            className="theme-light-only relative z-10 w-full max-w-[420px] object-contain md:max-w-[560px] lg:max-w-[660px]"
           />
         </div>
       </div>
 
       <div className="mx-auto mt-16 max-w-6xl text-center">
-        <p className="mb-9 text-base font-semibold">
+        <p className="mb-9 text-xl font-semibold md:text-2xl">
           Trusted by Global Innovators & Leading Brands
         </p>
 
