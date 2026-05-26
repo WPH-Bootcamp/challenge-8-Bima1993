@@ -130,25 +130,46 @@ body {
   color: #101828 !important;
 }
 
+.testimonial-card-button-side {
+  opacity: 0.34 !important;
+  filter: blur(0.35px);
+}
+
+.testimonial-card-button-left {
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 100%);
+}
+
+.testimonial-card-button-right {
+  mask-image: linear-gradient(to left, transparent 0%, black 15%, black 100%);
+}
+
+.testimonial-fade-left {
+  background: linear-gradient(to right, #000000 0%, rgb(0 0 0 / 0.96) 22%, rgb(0 0 0 / 0.72) 62%, transparent 100%);
+}
+
+.testimonial-fade-right {
+  background: linear-gradient(to left, #000000 0%, rgb(0 0 0 / 0.96) 22%, rgb(0 0 0 / 0.72) 62%, transparent 100%);
+}
+
 .light-theme .testimonial-card-button-side {
-  opacity: 0.42 !important;
-  filter: blur(0.75px);
+  opacity: 0.34 !important;
+  filter: blur(0.35px);
 }
 
 .light-theme .testimonial-card-button-left {
-  mask-image: linear-gradient(to right, transparent 0%, black 36%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 100%);
 }
 
 .light-theme .testimonial-card-button-right {
-  mask-image: linear-gradient(to left, transparent 0%, black 36%, black 100%);
+  mask-image: linear-gradient(to left, transparent 0%, black 15%, black 100%);
 }
 
 .light-theme .testimonial-fade-left {
-  background: linear-gradient(to right, #ffffff 0%, rgb(255 255 255 / 0.88) 42%, transparent 100%) !important;
+  background: linear-gradient(to right, #ffffff 0%, rgb(255 255 255 / 0.96) 22%, rgb(255 255 255 / 0.72) 62%, transparent 100%) !important;
 }
 
 .light-theme .testimonial-fade-right {
-  background: linear-gradient(to left, #ffffff 0%, rgb(255 255 255 / 0.88) 42%, transparent 100%) !important;
+  background: linear-gradient(to left, #ffffff 0%, rgb(255 255 255 / 0.96) 22%, rgb(255 255 255 / 0.72) 62%, transparent 100%) !important;
 }
 
 .light-theme .mobile-menu-panel {

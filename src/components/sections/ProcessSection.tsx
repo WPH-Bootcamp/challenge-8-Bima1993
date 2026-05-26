@@ -1,4 +1,6 @@
-const processSteps = [
+import type { ProcessStep } from "../../types";
+
+const processSteps: ProcessStep[] = [
   {
     title: "Discovery & Consultation",
     description: "Understand Your Needs & Goals",

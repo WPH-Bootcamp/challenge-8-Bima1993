@@ -1,7 +1,8 @@
 import { useState } from "react";
 import consultationImage from "../../assets/Consultation.jpg";
+import type { FaqItem } from "../../types";
 
-const faqs = [
+const faqs: FaqItem[] = [
   {
     question: "What services do you offer?",
     answer:
@@ -104,6 +105,8 @@ function FaqSection() {
                 <img
                   src={consultationImage}
                   alt="Business team discussing a project during a consultation meeting"
+                  loading="lazy"
+                  decoding="async"
                   className="mt-6 h-[146px] w-full rounded-2xl object-cover"
                 />
 
