@@ -2,13 +2,14 @@ import { useState } from "react";
 import ecommerceImage from "../../assets/E-Commerce.jpg";
 import fintechImage from "../../assets/Fintech.jpg";
 import healthcareImage from "../../assets/Healtcare.jpg";
+import type { IndustryItem } from "../../types";
 
-const industries = [
+const industries: IndustryItem[] = [
   {
     id: "fintech",
     label: "Fintech",
     description:
-      "We build secure, scalable, and compliant fintech solutions — from digital wallets to core banking systems — tailored to modern financial needs.",
+      "We build secure, scalable, and compliant fintech solutions - from digital wallets to core banking systems - tailored to modern financial needs.",
     image: fintechImage,
     alt: "A glowing payment card representing fintech solutions",
   },
@@ -95,6 +96,8 @@ function IndustriesSection() {
             <img
               src={activeIndustry.image}
               alt={activeIndustry.alt}
+              loading="lazy"
+              decoding="async"
               className="mt-7 h-[260px] w-full rounded-2xl object-cover md:h-[340px] lg:h-[360px]"
             />
           </article>
