@@ -7,8 +7,9 @@ import qaIcon from "../../assets/QA solutions.png";
 import softwareIcon from "../../assets/Software Development.png";
 import uiUxIcon from "../../assets/UI UX Design.png";
 import webIcon from "../../assets/Web Development.png";
+import type { ServiceItem } from "../../types";
 
-const services = [
+const services: ServiceItem[] = [
   {
     title: "Web Development",
     description: "Build fast, scalable, and SEO-friendly websites.",
@@ -88,6 +89,8 @@ function ServicesSection() {
                 src={service.icon}
                 alt=""
                 aria-hidden="true"
+                loading="lazy"
+                decoding="async"
                 className="absolute -top-5 left-6 h-14 w-14 object-contain"
               />
 

@@ -3,6 +3,7 @@ import failedDarkModalImage from "../../assets/Failed Dark Theme.png";
 import failedLightModalImage from "../../assets/Failed Light Mode.png";
 import successDarkModalImage from "../../assets/Success Dark Theme.png";
 import successLightModalImage from "../../assets/Success Light Mode.png";
+import type { ModalStatus } from "../../types";
 
 const serviceOptions = [
   "Web Development",
@@ -17,9 +18,7 @@ function ContactSection() {
   const [selectedServices, setSelectedServices] = useState<string[]>([
     "Web Development",
   ]);
-  const [modalStatus, setModalStatus] = useState<"success" | "failed" | null>(
-    null,
-  );
+  const [modalStatus, setModalStatus] = useState<ModalStatus | null>(null);
 
   function toggleService(service: string) {
     setSelectedServices((currentServices) =>
@@ -121,7 +120,9 @@ function ContactSection() {
                       }`}
                     >
                       {isChecked && (
-                        <span className="text-xs font-bold text-white">✓</span>
+                        <span className="text-xs font-bold text-white">
+                          &#10003;
+                        </span>
                       )}
                     </span>
                     <span>{service}</span>

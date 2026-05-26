@@ -1,4 +1,3 @@
-import Button from "../ui/Button";
 import brandLogos from "../../assets/Container.png";
 import darkHeroImage from "../../assets/Dark Theme Hero Section.jpg";
 import lightHeroImage from "../../assets/Light Theme Hero Section.png";
@@ -13,10 +12,17 @@ const stats = [
 
 function HeroSection() {
   return (
-    <section className="overflow-hidden bg-black px-6 pb-16 pt-16 text-white">
+    <section
+      id="about"
+      aria-labelledby="hero-heading"
+      className="overflow-hidden bg-black px-6 pb-16 pt-16 text-white"
+    >
       <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="relative z-20 max-w-[760px] space-y-2 lg:mr-[-120px] lg:pt-4">
-          <h1 className="text-[44px] font-bold leading-[1.12] md:text-[58px] lg:text-[64px]">
+          <h1
+            id="hero-heading"
+            className="text-[44px] font-bold leading-[1.12] md:text-[58px] lg:text-[64px]"
+          >
             Your Tech Partner for{" "}
             <span className="text-[#ff5a3d]">Smarter Growth</span>
           </h1>
@@ -27,7 +33,12 @@ function HeroSection() {
           </p>
 
           <div className="pt-8">
-            <Button size="sm">Let's Talk</Button>
+            <a
+              href="#contact"
+              className="keep-white inline-flex h-[44px] w-[197px] items-center justify-center gap-1 rounded-full bg-[rgba(255,98,62,1)] p-2 text-xs font-semibold text-white shadow-[inset_4px_4px_4px_0_rgba(255,255,255,0.25)] transition hover:bg-[#ff735c]"
+            >
+              Let's Talk
+            </a>
           </div>
         </div>
 

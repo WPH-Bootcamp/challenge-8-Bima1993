@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import logoSymbol from "../../assets/logo-symbol.png";
+import type { NavLink, ThemeMode } from "../../types";
 
-const navLinks = [
+const navLinks: NavLink[] = [
   { label: "About", href: "#about" },
   { label: "Service", href: "#services" },
   { label: "Projects", href: "#projects" },
@@ -9,7 +10,7 @@ const navLinks = [
   { label: "FAQ", href: "#faq" },
 ];
 
-function getSavedTheme() {
+function getSavedTheme(): ThemeMode {
   if (typeof window === "undefined") {
     return "dark";
   }
@@ -18,7 +19,7 @@ function getSavedTheme() {
 }
 
 function Navbar() {
-  const [theme, setTheme] = useState<"dark" | "light">(getSavedTheme);
+  const [theme, setTheme] = useState<ThemeMode>(getSavedTheme);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -35,7 +36,10 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-black/90">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="#" className="flex items-center gap-2 text-sm font-bold text-white">
+        <a
+          href="#"
+          className="flex items-center gap-2 text-sm font-bold text-white"
+        >
           <img src={logoSymbol} alt="" className="h-5 w-5 object-contain" />
           Your Logo
         </a>
@@ -73,6 +77,8 @@ function Navbar() {
         <button
           type="button"
           onClick={() => setIsMenuOpen(true)}
+          aria-controls="mobile-menu"
+          aria-expanded={isMenuOpen}
           aria-label="Open navigation menu"
           className="flex h-10 w-10 items-center justify-center text-white md:hidden"
         >
@@ -80,12 +86,16 @@ function Navbar() {
           <span className="flex flex-col gap-1.5">
             <span className="block h-0.5 w-6 bg-current" />
             <span className="block h-0.5 w-6 bg-current" />
+            <span className="block h-0.5 w-6 bg-current" />
           </span>
         </button>
       </nav>
 
       {isMenuOpen && (
-        <div className="mobile-menu-panel fixed inset-0 z-[120] bg-black px-6 py-5 text-white md:hidden">
+        <div
+          id="mobile-menu"
+          className="mobile-menu-panel fixed inset-0 z-[120] bg-black px-6 py-5 text-white md:hidden"
+        >
           <div className="flex items-center justify-between">
             <a
               href="#"
@@ -102,7 +112,7 @@ function Navbar() {
               aria-label="Close navigation menu"
               className="text-4xl leading-none"
             >
-              ×
+              &times;
             </button>
           </div>
 
@@ -114,7 +124,7 @@ function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
                 className="text-base font-semibold"
               >
-                {link.label === "Projects" ? "Porfolio" : link.label}
+                {link.label}
               </a>
             ))}
 
